@@ -1,11 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 body{
   font-family: 'Roboto', sans-serif;
   color: #33322E;
 }
 .container{
-  width: 1000px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -14,7 +63,7 @@ body{
 }
 
 .logo{
-  margin-top: 72px;
+  margin-top: 64px;
 }
 
 .logo a img{
@@ -24,32 +73,138 @@ body{
 .content{
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .content .text-data{
-  width: 50%;
+  width: 48%;
+}
+
+.text-data p{
+  font-size: 22px;
+  padding: 18px 0;
+  line-height: 130%;
+  width: 90%;
+  margin: 0;
 }
 
 .text-data h1{
-  font-size: 50px;
-  margin-bottom: 12px;
+  font-size: 60px;
+  margin-bottom: 16px;
+  margin-top: 100px;
+  letter-spacing: -1.8px;
   font-weight: 800;
-  line-height: 62px;
+  line-height: 64px;
 }
+
 .content .screenshot{
   width: 50%;
+  display: flex;
+  align-items: center;
 }
 
 .screenshot img{
   width: 100%;
+  margin-top: 60px;
+}
+
+.btns{
+  margin-top: 20px;
 }
 
 .download{
-  background-color: #33322e;
-  color: #fff;
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 18px 32px;
+  border-radius: 12px;
+  font-size: 20px;
   text-decoration: none;
+}
+
+.download.fill{
+  background-color: #33322e;
+  border: 2px solid #33322e;
+  color: #fff;
+}
+
+.download.outline{
+  margin-left: 24px;
+  background-color: #ffffff;
+  border: 2px solid #33322e;
+  color: #33322e;
+}
+
+.footer{
+  margin-top: 30px;
+  padding: 32px 0;
+}
+
+.footer p{
+  font-size: 16px;
+}
+
+.footer p a{
+  color: #33322e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
+@media only screen and (max-device-width: 480px){
+
+  .container{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .content .text-data{
+    width: 100%!important;
+    padding: 18px;
+  }
+
+  .text-data p{
+    font-size: 22px;
+    padding: 18px 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .text-data h1{
+    font-size: 54px;
+    margin-bottom: 16px;
+    margin-top: 50px;
+    letter-spacing: -1.8px;
+    font-weight: 800;
+    line-height: 64px;
+  }
+
+  .content .screenshot{
+    width: 100%!important;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+  }
+
+  .screenshot img{
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .download{
+    width: 80%;
+  }
+  .download.outline{
+    margin-left: 0;
+    background-color: #ffffff;
+    border: 2px solid #33322e;
+    color: #33322e;
+    margin-top: 24px;
+  }
 }
