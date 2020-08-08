@@ -49,18 +49,34 @@ table {
 	border-spacing: 0;
 }
 
-body{
-  font-family: 'Roboto', sans-serif;
-  color: #33322E;
+* {
+	margin: 0;
+	padding: 0;
 }
+html,body{
+	overflow-x:hidden;
+}
+body {
+  width: fit-content;
+  min-width: 100%; /* because the content might only be a few words */
+  box-sizing: border-box; /* because 100% + padding > 100% */
+	font-family: 'Roboto', sans-serif;
+  color: #33322E;
+  background: #fff;
+}
+
 .container{
   width: 1100px;
   margin: 0 auto;
   position: relative;
 }
 
+.header{
+	width: 100%;
+	position: relative;
+}
 .hero-wrap{
-
+	padding: 24px;
 }
 
 .logo{
@@ -105,21 +121,30 @@ body{
 }
 
 .screenshot img{
-  width: 110%;
+  width: 100%;
   margin-top: 80px;
 }
 
 .btns{
   margin-top: 50px;
+	display: flex;
+	align-items: center;
 }
 
+.btns .ph{
+	display: inline-block;
+	margin-left: 18px;
+}
 
+.btns .ph img{
+}
 
 .download{
   display: inline-block;
-  padding: 18px 32px;
+  padding: 16px 32px;
   border-radius: 12px;
   font-size: 20px;
+	line-height: 20px;
   text-decoration: none;
   align-items: center;
   vertical-align: middle;
@@ -166,8 +191,10 @@ body{
   display: inline-block;
 }
 
-
-@media only screen and (max-width: 480px){
+.header{
+	width: 100%;
+}
+@media(max-width: 480px){
 
   .container{
     width: 100%;
@@ -179,13 +206,13 @@ body{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-top: 10px;
     flex-direction: column;
+		padding: 0;
+
   }
 
   .content .text-data{
     width: 100%!important;
-    padding: 18px;
   }
 
   .text-data p{
@@ -208,13 +235,23 @@ body{
     width: 100%!important;
     display: flex;
     align-items: center;
-    padding: 18px;
   }
 
   .screenshot img{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 40px;
   }
+
+	.btns{
+	  margin-top: 50px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.btns .ph{
+		margin-top: 32px;
+	}
 
   .download{
     width: 80%;
@@ -226,4 +263,15 @@ body{
     color: #33322e;
     margin-top: 24px;
   }
+
+}
+
+.credit{
+	margin-top: 48px;
+}
+
+.credit a{
+	color: #33322e;
+	font-weight: 700;
+	text-decoration: none;
 }
