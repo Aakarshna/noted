@@ -149,12 +149,20 @@ body{
 
 .footer p{
   font-size: 18px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.footer p a img{
+  height: 16px;
+  padding-top: 2px;
 }
 
 .footer p a{
   color: #33322e;
   text-decoration: none;
   font-weight: 500;
+  display: inline-block;
 }
 
 
