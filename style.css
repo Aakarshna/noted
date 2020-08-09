@@ -134,6 +134,12 @@ body {
 .btns .ph{
 	display: inline-block;
 	margin-left: 18px;
+	line-height: 0;
+}
+
+.btns .ph a{
+	display: inline-block;
+	line-height: 0;
 }
 
 .btns .ph img{
@@ -144,7 +150,7 @@ body {
   padding: 16px 32px;
   border-radius: 12px;
   font-size: 20px;
-	line-height: 20px;
+	line-height: 22px;
   text-decoration: none;
   align-items: center;
   vertical-align: middle;
@@ -157,7 +163,6 @@ body {
 
 .download.fill{
   background-color: #33322e;
-  border: 2px solid #33322e;
   color: #fff;
 }
 
@@ -260,10 +265,10 @@ body {
   .download{
     width: 80%;
   }
+
   .download.outline{
     margin-left: 0;
     background-color: #ffffff;
-    border: 2px solid #33322e;
     color: #33322e;
     margin-top: 24px;
   }
