@@ -293,13 +293,13 @@ footer{
 	display: flex;
 	vertical-align: middle;
 	font-weight: 300;
-	line-height: 24px;
+	line-height: 100%;
 }
 
 .credit-f a{
 	color: #fff;
 	text-decoration: none;
-	margin-left: 8px;
+	margin-left: 4px;
 	font-weight: 600;
 	font-size: 18px;
 	display: inline-block;
@@ -311,8 +311,8 @@ footer{
 
 .credit-f p a img{
 	filter: invert(100%);
-	height: 24px;
-	margin-left: 12px;
+	height: 18px;
+	margin-left: 2px;
 }
 
 @media(max-width: 480px){
@@ -434,6 +434,51 @@ footer{
 		margin-top: 14px;
 	}
 
+	.mas{
+		display: -ms-flexbox;
+		-ms-flex-direction: column;
+		-ms-flex-wrap: wrap;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: auto;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.mas .mas-brick {
+		width: 100%;
+		transition: .8s opacity;
+		text-align: left;
+	}
+
+	.credit-f{
+		color: #fff;
+		padding: 24px;
+	}
+
+	.credit-f p{
+		font-size: 18px;
+		display: flex;
+		vertical-align: middle;
+		font-weight: 300;
+		line-height: 24px;
+		flex-direction: column;
+	}
+
+	.credit-f a{
+		color: #fff;
+		text-decoration: none;
+		margin-left: 0;
+		font-weight: 600;
+		font-size: 18px;
+		display: block;
+		margin-top: 12px;
+	}
+
+	.credit-f a img{
+		margin-left: 0px;
+	}
 
 }
 
